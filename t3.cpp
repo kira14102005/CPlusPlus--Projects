@@ -1,4 +1,4 @@
-#include "../HeaderFile/file.h"
+#include "/HeaderFile/file.h"
 using namespace std;
 class tictactoe
 {
@@ -24,13 +24,13 @@ public:
     void show()     //FUNCTION TO DISPLAY THE BOARD AFTER CHANGES
     {
         cout << "\t     |     |     " << endl;
-        cout << "\t  " << base[0] << "  | " << base[1] << "  |  " << base[2] << endl;
+        cout << "\t  " << base[0] << "  |  " << base[1] << "  |  " << base[2] << endl;
         cout << "\t_____|_____|_____" << endl;
         cout << "\t     |     |     " << endl;
-        cout << "\t  " << base[3] << "  | " << base[4] << "  |  " << base[5] << endl;
+        cout << "\t  " << base[3] << "  |  " << base[4] << "  |  " << base[5] << endl;
         cout << "\t_____|_____|_____" << endl;
         cout << "\t     |     |     " << endl;
-        cout << "\t  " << base[6] << "  | " << base[7] << "  |  " << base[8] << endl;
+        cout << "\t  " << base[6] << "  |  " << base[7] << "  |  " << base[8] << endl;
         cout << "\t     |     |     " << endl;
         cout<<endl;
     }
@@ -105,6 +105,7 @@ int main()
     cin >> p2;
     cout<<endl;
     tictactoe *gm = new tictactoe(p1, p2);
+    gm->show();
     while (gm->gameover())
     {
         gm->player_turn();
